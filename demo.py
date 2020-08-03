@@ -2,12 +2,13 @@ import pyrealsense2 as rs
 
 import numpy as np
 import cv2
+
 from openpose_light import OpenposeLight
 
 
 class RealsensePose:
     def __init__(self, checkpoints_path, w=640, h=480):
-        self.openpose = OpenposeLight("openpose_light/checkpoint_iter_370000.pth.tar")
+        self.openpose = OpenposeLight(checkpoints_path)
 
         self.pipeline = rs.pipeline()
 
@@ -84,5 +85,7 @@ class RealsensePose:
                 break
 
 
-rs_pose = RealsensePose('openpose_light/checkpoint_iter_370000.pth.tar')
-rs_pose.run()
+if __name__ == "__main__":
+    from config import OPENPOSE_PATH
+    rs_pose = RealsensePose(OPENPOSE_PATH)
+    rs_pose.run()

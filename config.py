@@ -5,7 +5,7 @@ CAP_HEIGHT = 480
 
 
 # 模型、配置路径
-OPENPOSE_PATH = "checkpoints/openpose.pth"
+OPENPOSE_PATH = "openpose_light/checkpoint_iter_370000.pth.tar"
 
 
 # Openpose配置

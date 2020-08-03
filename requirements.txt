@@ -1,0 +1,4 @@
+pyrealsense2==2.36.0.2038
+numpy==1.19.1
+torch==1.1.0
+opencv_python==4.3.0.36
